@@ -1,0 +1,585 @@
+.about-page {
+.hero {
+  padding-block: 25px 78px;
+  background: var(--paper);
+}
+
+.breadcrumb {
+  margin-bottom: 29px;
+  color: #78808d;
+  font-size: 10px;
+}
+
+.breadcrumb ol {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb a {
+  transition: color 180ms ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--navy);
+}
+
+.breadcrumb [aria-current="page"] {
+  color: var(--navy);
+}
+
+.heroGrid {
+  display: grid;
+  min-height: 470px;
+  grid-template-columns: 1fr 0.94fr;
+  align-items: center;
+  gap: 8%;
+}
+
+.heroCopy {
+  max-width: 590px;
+  padding-block: 28px;
+}
+
+.heroCopy h1 {
+  margin: 18px 0 19px;
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: clamp(47px, 5.3vw, 70px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.06;
+}
+
+.heroCopy h1 em {
+  color: #9c8052;
+  font-weight: 400;
+}
+
+.heroCopy > p {
+  max-width: 470px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.heroSignature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+  color: #566273;
+  font-size: 10px;
+  letter-spacing: 0.015em;
+}
+
+.heroSignature > span {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 470px;
+  margin: 0;
+  overflow: hidden;
+  background: #d3d5d2;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroImage {
+  object-position: 55% center;
+  filter: saturate(0.82);
+}
+
+.heroVisual::after {
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(0deg, rgba(16, 28, 50, 0.62), transparent);
+  content: "";
+}
+
+.heroCaption {
+  position: absolute;
+  z-index: 1;
+  right: 17px;
+  bottom: 17px;
+  left: 17px;
+  display: flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--white);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.whoSection {
+  padding-block: 103px;
+  background: var(--white);
+}
+
+.whoGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: 11%;
+}
+
+.whoHeading h2 {
+  max-width: 470px;
+}
+
+.whoCopy {
+  padding-top: 9px;
+}
+
+.whoCopy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.whoCopy p + p {
+  margin-top: 17px;
+}
+
+.beliefs {
+  padding-block: 88px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.beliefsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8%;
+}
+
+.belief + .belief {
+  padding-left: 9%;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.beliefNumber,
+.beliefLabel {
+  display: block;
+}
+
+.beliefNumber {
+  color: var(--gold-light);
+  font-family: var(--serif);
+  font-size: 13px;
+}
+
+.beliefLabel {
+  margin-top: 25px;
+  color: var(--gold-light);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.belief h2 {
+  max-width: 440px;
+  margin: 11px 0 12px;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.2vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.18;
+}
+
+.belief p {
+  max-width: 470px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.values {
+  padding-block: 108px 115px;
+  background: var(--paper);
+}
+
+.valuesHeading {
+  max-width: 690px;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 46px;
+  border-top: 1px solid #deddd7;
+}
+
+.value {
+  min-height: 181px;
+  padding: 22px 27px 21px 0;
+  border-bottom: 1px solid #deddd7;
+}
+
+.value:not(:nth-child(3n + 1)) {
+  padding-left: 26px;
+  border-left: 1px solid #deddd7;
+}
+
+.valueNumber {
+  color: #9b8054;
+  font-family: var(--serif);
+  font-size: 12px;
+}
+
+.value h3 {
+  margin: 17px 0 7px;
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.value p {
+  max-width: 290px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.approach {
+  padding-block: 108px 112px;
+  background: var(--white);
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: 0.86fr 1.14fr;
+  align-items: start;
+  gap: 10%;
+}
+
+.approachHeading h2 {
+  max-width: 470px;
+}
+
+.approachNote {
+  max-width: 380px;
+  margin: 21px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.approachList {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.approachStep {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 13px;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.approachStep > span {
+  padding-top: 1px;
+  color: #9b8054;
+  font-family: var(--serif);
+  font-size: 12px;
+}
+
+.approachStep h3 {
+  margin: 0;
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.approachStep p {
+  max-width: 455px;
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.germany {
+  padding-block: 102px 108px;
+  background: var(--paper);
+}
+
+.germanyGrid {
+  display: grid;
+  grid-template-columns: 0.96fr 1.04fr;
+  align-items: center;
+  gap: 9%;
+}
+
+.germanyCopy > p {
+  max-width: 500px;
+  margin: 17px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.germanyCopy > .button {
+  margin-top: 25px;
+}
+
+.cta {
+  padding-block: 68px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.ctaInner {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.ctaMark {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  place-items: center;
+  border: 1px solid rgba(216, 189, 145, 0.45);
+}
+
+.ctaMark svg {
+  width: 48px;
+  stroke: var(--gold-light);
+  stroke-width: 1;
+}
+
+.ctaCopy .eyebrow {
+  font-size: 9px;
+}
+
+.ctaCopy h2 {
+  margin: 7px 0 4px;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.4vw, 43px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.ctaCopy h2 em {
+  color: var(--gold-light);
+  font-weight: 400;
+}
+
+.ctaCopy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 11px;
+}
+
+.ctaInner > .button {
+  min-width: 195px;
+}
+
+@media (max-width: 980px) {
+  .heroGrid {
+    min-height: 420px;
+    gap: 6%;
+  }
+
+  .heroVisual {
+    min-height: 420px;
+  }
+
+  .whoGrid {
+    gap: 7%;
+  }
+
+  .beliefsGrid {
+    gap: 6%;
+  }
+
+  .value {
+    min-height: 195px;
+  }
+
+  .approachGrid,
+  .germanyGrid {
+    gap: 6%;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-block: 20px 62px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 21px;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .heroCopy {
+    padding-block: 10px 0;
+  }
+
+  .heroCopy h1 {
+    max-width: 560px;
+    font-size: clamp(43px, 10.5vw, 62px);
+  }
+
+  .heroVisual {
+    min-height: 340px;
+  }
+
+  .whoSection,
+  .values,
+  .approach {
+    padding-block: 77px;
+  }
+
+  .whoGrid,
+  .approachGrid,
+  .germanyGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .whoCopy {
+    padding-top: 0;
+  }
+
+  .whoCopy p {
+    font-size: 12px;
+  }
+
+  .beliefs {
+    padding-block: 65px;
+  }
+
+  .beliefsGrid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .belief + .belief {
+    padding-top: 31px;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 0;
+  }
+
+  .beliefLabel {
+    margin-top: 13px;
+  }
+
+  .belief h2 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 32px;
+  }
+
+  .value {
+    min-height: 180px;
+    padding-right: 16px;
+  }
+
+  .value:not(:nth-child(3n + 1)) {
+    padding-left: 16px;
+  }
+
+  .value:nth-child(2n + 1) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .value h3 {
+    font-size: 17px;
+  }
+
+  .approachList {
+    margin-top: 6px;
+  }
+
+  .germany {
+    padding-block: 75px;
+  }
+
+  .cta {
+    padding-block: 51px;
+  }
+
+  .ctaInner {
+    grid-template-columns: 1fr;
+    gap: 21px;
+  }
+
+  .ctaMark {
+    width: 58px;
+    height: 58px;
+  }
+
+  .ctaMark svg {
+    width: 42px;
+  }
+
+  .ctaCopy h2 {
+    font-size: clamp(31px, 8.5vw, 41px);
+  }
+}
+
+@media (max-width: 420px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .value,
+  .value:not(:nth-child(3n + 1)),
+  .value:nth-child(2n + 1) {
+    min-height: 0;
+    padding: 19px 0;
+    border-left: 0;
+  }
+
+  .value h3 {
+    margin-top: 11px;
+  }
+
+  .heroVisual {
+    min-height: 285px;
+  }
+}
+  }

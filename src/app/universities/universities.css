@@ -1,0 +1,742 @@
+.universities-page {
+  .universities-hero {
+    padding-block: 25px 82px;
+    background: var(--paper);
+  }
+
+  .universities-breadcrumb {
+    margin-bottom: 29px;
+    color: #78808d;
+    font-size: 10px;
+  }
+
+  .universities-breadcrumb ol {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .universities-breadcrumb a,
+  .universities-breadcrumb [aria-current="page"] {
+    transition: color 180ms ease;
+  }
+
+  .universities-breadcrumb a:hover,
+  .universities-breadcrumb [aria-current="page"] {
+    color: var(--navy);
+  }
+
+  .universities-hero__grid {
+    display: grid;
+    min-height: 450px;
+    grid-template-columns: 1fr 0.94fr;
+    align-items: center;
+    gap: 8%;
+  }
+
+  .universities-hero__copy {
+    max-width: 590px;
+    padding-block: 28px;
+  }
+
+  .universities-hero__copy h1 {
+    margin: 18px 0 19px;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: clamp(47px, 5.2vw, 68px);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 1.06;
+  }
+
+  .universities-hero__copy h1 em {
+    color: #9c8052;
+    font-weight: 400;
+  }
+
+  .universities-hero__copy > p {
+    max-width: 465px;
+    margin: 0 0 26px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .universities-hero__visual {
+    position: relative;
+    min-height: 450px;
+    margin: 0;
+    overflow: hidden;
+    background: #d3d5d2;
+  }
+
+  .universities-hero__image {
+    object-fit: cover;
+    object-position: 52% center;
+    filter: saturate(0.82);
+  }
+
+  .universities-hero__visual::after {
+    position: absolute;
+    inset: 52% 0 0;
+    background: linear-gradient(0deg, rgba(16, 28, 50, 0.58), transparent);
+    content: "";
+  }
+
+  .universities-hero__caption {
+    position: absolute;
+    z-index: 1;
+    right: 17px;
+    bottom: 17px;
+    left: 17px;
+    display: flex;
+    min-height: 45px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-inline: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: var(--white);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .university-directory {
+    padding-block: 101px 109px;
+    background: var(--white);
+  }
+
+  .university-directory__intro {
+    display: grid;
+    grid-template-columns: 0.94fr 0.68fr;
+    align-items: end;
+    gap: 10%;
+  }
+
+  .university-directory__intro h2 {
+    max-width: 630px;
+    margin: 13px 0 0;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: clamp(34px, 4vw, 49px);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.13;
+  }
+
+  .university-directory__intro > p {
+    max-width: 420px;
+    margin: 0 0 5px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .university-filters {
+    margin-top: 37px;
+    padding: 23px 25px 18px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+  }
+
+  .university-filters__search {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #deddd7;
+  }
+
+  .university-filters label,
+  .university-filters__search label {
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+  }
+
+  .university-filters input,
+  .university-filters select {
+    width: 100%;
+    min-width: 0;
+    min-height: 43px;
+    padding: 0 12px;
+    border: 1px solid #dcdad3;
+    border-radius: 0;
+    background: var(--white);
+    color: var(--ink);
+    font: inherit;
+    font-size: 11px;
+  }
+
+  .university-filters input::placeholder {
+    color: #8a9099;
+    opacity: 1;
+  }
+
+  .university-filters input:focus,
+  .university-filters select:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 1px;
+  }
+
+  .university-filters__controls {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    padding-block: 19px;
+    border-bottom: 1px solid #deddd7;
+  }
+
+  .university-filters__controls label,
+  .university-filters__sort {
+    display: grid;
+    gap: 7px;
+  }
+
+  .university-filters__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-top: 16px;
+  }
+
+  .university-filters__count {
+    margin: 0 auto 0 0;
+    color: var(--muted);
+    font-size: 10px;
+  }
+
+  .university-filters__count strong {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .university-filters__sort {
+    grid-template-columns: auto minmax(170px, 1fr);
+    align-items: center;
+    gap: 10px;
+  }
+
+  .university-filters__sort select {
+    min-height: 37px;
+  }
+
+  .university-filters__reset {
+    min-height: 37px;
+    padding: 0 13px;
+    border: 1px solid #c9c5ba;
+    background: transparent;
+    color: var(--navy);
+    cursor: pointer;
+    font: inherit;
+    font-size: 10px;
+    font-weight: 600;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease,
+      color 180ms ease;
+  }
+
+  .university-filters__reset:not(:disabled):hover {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .university-filters__reset:disabled {
+    color: #9298a0;
+    cursor: not-allowed;
+  }
+
+  .university-filters__reset:focus-visible,
+  .university-empty button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  .university-filters__note {
+    margin: 13px 0 0;
+    color: #747d89;
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+  .university-results {
+    margin-top: 35px;
+  }
+
+  .university-results__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .university-card {
+    position: relative;
+    display: flex;
+    min-height: 305px;
+    flex-direction: column;
+    padding: 23px 25px 0;
+    border: 1px solid var(--line);
+    background: var(--white);
+    transition: border-color 180ms ease;
+  }
+
+  .university-card:hover {
+    border-color: #c8b58f;
+  }
+
+  .university-card__topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .university-card__number {
+    color: #9b8054;
+    font-family: var(--serif);
+    font-size: 12px;
+  }
+
+  .university-card__city {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .university-card__monogram {
+    position: absolute;
+    top: 63px;
+    right: 24px;
+    display: grid;
+    min-width: 51px;
+    height: 45px;
+    place-items: center;
+    padding-inline: 7px;
+    border: 1px solid rgba(197, 164, 109, 0.5);
+    color: #9b8054;
+    font-family: var(--serif);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+
+  .university-card__type {
+    max-width: calc(100% - 78px);
+    margin: 18px 0 5px;
+    color: #8a744d;
+    font-size: 9px;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .university-card h3 {
+    max-width: calc(100% - 70px);
+    margin: 0;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: clamp(21px, 2.3vw, 27px);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.23;
+  }
+
+  .university-card__description {
+    max-width: 520px;
+    margin: 12px 0 14px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .university-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 17px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .university-card__tag {
+    padding: 4px 8px;
+    border: 1px solid #e6e2d9;
+    color: #596575;
+    font-size: 8px;
+    letter-spacing: 0.025em;
+  }
+
+  .university-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin-top: auto;
+    padding-block: 13px;
+    border-top: 1px solid var(--line);
+  }
+
+  .university-card__links a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 7px;
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 650;
+    transition: color 180ms ease;
+  }
+
+  .university-card__links a:hover {
+    color: #8a6c3e;
+  }
+
+  .university-card__links a span {
+    color: #9b8054;
+    font-size: 13px;
+  }
+
+  .university-empty {
+    display: flex;
+    min-height: 280px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    text-align: center;
+  }
+
+  .university-empty > span {
+    color: #9b8054;
+    font-family: var(--serif);
+    font-size: 24px;
+  }
+
+  .university-empty h3 {
+    max-width: 550px;
+    margin: 10px 0 7px;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .university-empty p {
+    max-width: 430px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .university-empty button {
+    margin-top: 19px;
+    padding: 8px 0;
+    border: 0;
+    border-bottom: 1px solid var(--gold);
+    background: transparent;
+    color: var(--navy);
+    cursor: pointer;
+    font: inherit;
+    font-size: 10px;
+    font-weight: 650;
+  }
+
+  .university-notice {
+    padding-block: 48px;
+    background: #f0f0ed;
+  }
+
+  .university-notice__inner {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    align-items: start;
+    gap: 17px;
+    max-width: 960px;
+  }
+
+  .university-notice__inner > span {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid #c8b58f;
+    color: #8a744d;
+    font-family: var(--serif);
+    font-size: 16px;
+  }
+
+  .university-notice h2 {
+    margin: 0 0 5px;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .university-notice p {
+    margin: 0;
+    color: #586475;
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .universities-cta {
+    padding-block: 68px;
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .universities-cta__inner {
+    display: grid;
+    grid-template-columns: 62px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 27px;
+  }
+
+  .universities-cta__mark {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    place-items: center;
+    border: 1px solid rgba(216, 189, 145, 0.45);
+  }
+
+  .universities-cta__mark svg {
+    width: 43px;
+    stroke: var(--gold-light);
+    stroke-width: 1;
+  }
+
+  .universities-cta__copy .eyebrow {
+    font-size: 9px;
+  }
+
+  .universities-cta__copy h2 {
+    max-width: 650px;
+    margin: 7px 0 5px;
+    color: var(--white);
+    font-family: var(--serif);
+    font-size: clamp(30px, 3.2vw, 40px);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+  }
+
+  .universities-cta__copy p {
+    max-width: 580px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 11px;
+  }
+
+  .universities-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  @media (max-width: 1080px) {
+    .universities-hero__grid {
+      min-height: 420px;
+      gap: 6%;
+    }
+
+    .universities-hero__visual {
+      min-height: 420px;
+    }
+
+    .university-filters__controls {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .universities-hero {
+      padding-block: 20px 62px;
+    }
+
+    .universities-breadcrumb {
+      margin-bottom: 21px;
+    }
+
+    .universities-hero__grid {
+      grid-template-columns: 1fr;
+      gap: 29px;
+    }
+
+    .universities-hero__copy {
+      padding-block: 10px 0;
+    }
+
+    .universities-hero__copy h1 {
+      max-width: 560px;
+      font-size: clamp(43px, 10.5vw, 60px);
+    }
+
+    .universities-hero__visual {
+      min-height: 340px;
+    }
+
+    .university-directory {
+      padding-block: 76px;
+    }
+
+    .university-directory__intro {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .university-directory__intro > p {
+      max-width: 570px;
+    }
+
+    .university-filters {
+      margin-top: 29px;
+      padding: 18px;
+    }
+
+    .university-filters__search {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .university-filters__summary {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .university-filters__count {
+      width: 100%;
+    }
+
+    .university-filters__sort {
+      flex: 1 1 250px;
+    }
+
+    .university-results {
+      margin-top: 24px;
+    }
+
+    .university-results__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .university-card {
+      min-height: 285px;
+      padding-inline: 20px;
+    }
+
+    .university-card__monogram {
+      right: 19px;
+    }
+
+    .university-notice {
+      padding-block: 38px;
+    }
+
+    .universities-cta {
+      padding-block: 52px;
+    }
+
+    .universities-cta__inner {
+      grid-template-columns: 1fr;
+      gap: 21px;
+    }
+
+    .universities-cta__actions {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .universities-hero__copy h1 {
+      font-size: clamp(41px, 11vw, 53px);
+    }
+
+    .universities-hero__visual {
+      min-height: 285px;
+    }
+
+    .universities-hero__caption {
+      right: 12px;
+      bottom: 12px;
+      left: 12px;
+      padding-inline: 10px;
+      font-size: 8px;
+    }
+
+    .university-filters__controls {
+      grid-template-columns: 1fr;
+    }
+
+    .university-filters__summary {
+      align-items: stretch;
+    }
+
+    .university-filters__sort {
+      flex-basis: 100%;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .university-filters__reset {
+      width: 100%;
+    }
+
+    .university-card {
+      min-height: 300px;
+      padding-inline: 17px;
+    }
+
+    .university-card__monogram {
+      right: 16px;
+    }
+
+    .university-card h3 {
+      font-size: 23px;
+    }
+
+    .university-card__links {
+      gap: 8px 14px;
+    }
+
+    .university-notice__inner {
+      grid-template-columns: 30px minmax(0, 1fr);
+      gap: 13px;
+    }
+
+    .university-notice__inner > span {
+      width: 28px;
+      height: 28px;
+    }
+
+    .universities-cta__copy h2 {
+      font-size: clamp(29px, 8.5vw, 37px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
